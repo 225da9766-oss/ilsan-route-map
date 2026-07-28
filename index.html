@@ -477,13 +477,13 @@ function updateLabelScale(){
 }
 
 function addCenterPin(){
-  // WF05 일산센터 고정 위치 (사리현로 101-11 인근, 지도 좌표계 기준 검증된 값)
-  const coords=new kakao.maps.LatLng(37.690532,126.824307);
+  // WF05 일산센터(GS네트웍스 고양물류센터) - 카카오 지오코더로 확인한 정확한 좌표 (경기 고양시 일산동구 사리현로 101-11)
+  const coords=new kakao.maps.LatLng(37.6902774441356,126.828905489449);
   const html=`<div class="center-pin" id="wf05pin">
     <svg width="22" height="30" viewBox="0 0 22 30" xmlns="http://www.w3.org/2000/svg">
-      <path d="M11 0C4.9 0 0 4.9 0 11c0 8 11 19 11 19s11-11 11-19C22 4.9 17.1 0 11 0z" fill="#2f8fee"/>
+      <path d="M11 0C4.9 0 0 4.9 0 11c0 8 11 19 11 19s11-11 11-19C22 4.9 17.1 0 11 0z" fill="#e53935"/>
       <circle cx="11" cy="11" r="7" fill="#fff"/>
-      <polygon points="7,9 15,9 11,14.5" fill="#2f8fee"/>
+      <polygon points="7,9 15,9 11,14.5" fill="#e53935"/>
     </svg>
   </div>`;
   const pinOv=new kakao.maps.CustomOverlay({position:coords,content:html,xAnchor:0.5,yAnchor:1,zIndex:10});
